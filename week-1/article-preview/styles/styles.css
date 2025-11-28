@@ -1,0 +1,153 @@
+.blog-card {
+	max-width: 400px;
+	border: 1px solid #ddd;
+	border-radius: 8px;
+	padding: 16px;
+	margin: 16px;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+	position: relative;
+}
+
+.card-image {
+	width: 100%;
+	height: 200px;
+	object-fit: cover;
+	border-radius: 4px;
+}
+
+.card-title {
+	font-size: 1.2em;
+	margin: 12px 0;
+}
+
+.card-excerpt {
+	color: #666;
+	line-height: 1.4;
+}
+
+.share-btn {
+	background: #007bff;
+	color: white;
+	border: none;
+	padding: 8px 16px;
+	border-radius: 4px;
+	cursor: pointer;
+}
+
+/* Desktop Tooltip (≥ 768px) */
+@media (min-width: 768px) {
+	.social-tooltip {
+		display: none;
+		position: absolute;
+		top: 100%;
+		left: 50%;
+		transform: translateX(-50%);
+		background: #333;
+		color: white;
+		padding: 12px;
+		border-radius: 4px;
+		box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+		min-width: 150px;
+		z-index: 1000;
+		opacity: 0;
+		transition: opacity 0.3s ease;
+		margin-top: 8px;
+	}
+
+	.social-tooltip.show {
+		display: block;
+		opacity: 1;
+	}
+
+	.social-links {
+		list-style: none;
+		padding: 0;
+		margin: 0;
+	}
+
+	.social-links li {
+		margin: 4px 0;
+	}
+
+	.social-links a {
+		color: white;
+		text-decoration: none;
+		display: block;
+		padding: 4px;
+	}
+
+	.social-links a:hover {
+		background: #555;
+		border-radius: 2px;
+	}
+
+	.close-tooltip {
+		position: absolute;
+		top: 4px;
+		right: 8px;
+		background: none;
+		border: none;
+		color: white;
+		font-size: 18px;
+		cursor: pointer;
+	}
+}
+
+/* Mobile Tooltip (< 768px) */
+@media (max-width: 767px) {
+	.social-tooltip {
+		display: none;
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100vh;
+		background: rgba(0, 0, 0, 0.8);
+		z-index: 1000;
+		padding: 60px 20px;
+		box-sizing: border-box;
+		transform: translateY(-100%);
+		transition: transform 0.3s ease;
+	}
+
+	.social-tooltip.show {
+		display: block;
+		transform: translateY(0);
+	}
+
+	.social-links {
+		list-style: none;
+		padding: 0;
+		margin: 0;
+		text-align: center;
+	}
+
+	.social-links li {
+		margin: 16px 0;
+	}
+
+	.social-links a {
+		color: white;
+		text-decoration: none;
+		display: block;
+		padding: 12px;
+		background: #333;
+		border-radius: 4px;
+		font-size: 1.1em;
+	}
+
+	.social-links a:hover {
+		background: #555;
+	}
+
+	.close-tooltip {
+		position: fixed;
+		top: 20px;
+		right: 20px;
+		background: none;
+		border: none;
+		color: white;
+		font-size: 24px;
+		cursor: pointer;
+	}
+}

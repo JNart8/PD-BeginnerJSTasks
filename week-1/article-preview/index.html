@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Article Preview</title>
+		<link rel="stylesheet" href="styles.css" />
+	</head>
+	<body>
+		<div class="blog-card">
+			<img src="article-image.jpg" alt="Article Thumbnail" class="card-image" />
+			<h3 class="card-title">Sample Blog Post Title</h3>
+			<p class="card-excerpt">
+				A short preview of the article content to entice readers...
+			</p>
+			<button class="share-btn" id="shareBtn">Share</button>
+
+			<!-- Social Tooltip -->
+			<div class="social-tooltip" id="tooltip">
+				<ul class="social-links">
+					<li>
+						<a
+							href="https://twitter.com/intent/tweet?url=YOUR_ARTICLE_URL"
+							target="_blank"
+							>Twitter</a
+						>
+					</li>
+					<li>
+						<a
+							href="https://www.facebook.com/sharer/sharer.php?u=YOUR_ARTICLE_URL"
+							target="_blank"
+							>Facebook</a
+						>
+					</li>
+					<li>
+						<a
+							href="https://www.linkedin.com/sharing/share-offsite/?url=YOUR_ARTICLE_URL"
+							target="_blank"
+							>LinkedIn</a
+						>
+					</li>
+				</ul>
+				<button class="close-tooltip" id="closeBtn">×</button>
+			</div>
+		</div>
+
+		<script src="script.js"></script>
+	</body>
+</html>
