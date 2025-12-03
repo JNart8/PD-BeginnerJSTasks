@@ -38,20 +38,3 @@ Create an interactive job listings component that fetches job data from a JSON f
 3. **AND Logic Filtering**: Jobs must match ALL selected tags
 4. **Dynamic Filter Bar**: Selected tags appear at top for easy management
 5. **Real-time Updates**: Job list updates instantly as filters change
-
-### 💡 Technical Highlights
-
-```javascript
-// Core filtering logic
-const filteredJobs = jobs.filter((job) =>
-	selectedTags.every((tag) => job.tags.includes(tag))
-);
-
-// Event delegation for dynamic tags
-document.addEventListener("click", function (e) {
-	if (e.target.classList.contains("job-tag")) {
-		const tag = e.target.textContent;
-		toggleFilter(tag);
-	}
-});
-```
