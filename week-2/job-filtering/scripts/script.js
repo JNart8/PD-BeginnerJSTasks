@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", async function () {
 	// Fetch and load jobs
 	async function loadJobs() {
 		try {
-			const response = await fetch("./jobs.json");
+			const response = await fetch("./data/jobs.json");
 			jobs = await response.json();
 			renderJobs(jobs);
 		} catch (error) {
